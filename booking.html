@@ -1,13 +1,137 @@
-<!-- EmailJS Form -->
-<form id="booking-form">
-  <input type="text" name="user_name" placeholder="Your Name" required>
-  <input type="email" name="user_email" placeholder="Your Email" required>
-  <input type="tel" name="user_phone" placeholder="Your Phone" required>
-  <input type="text" name="user_company" placeholder="Your Company (Optional)">
-  <textarea name="message" placeholder="Tell us your goals..." required></textarea>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEO Booking Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Hidden field for plan -->
-  <input type="hidden" name="plan" value="Basic Plan">
+    .booking-form-section {
+      background-color: #f9f9f9;
+      padding: 80px 20px;
+      border-radius: 300px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+    }
 
-  <button type="submit">Submit Booking</button>
-</form>
+    .form-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 50px 40px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+    }
+
+    .booking-form h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    .booking-form label {
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 16px;
+      font-size: 1.05rem;
+      width: 100%;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .booking-form input:focus,
+    .booking-form select:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+      outline: none;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: white;
+      padding: 16px;
+      width: 100%;
+      font-size: 1.15rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-gold:hover {
+      background-color: #c39c2d;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Booking Form Section -->
+<section class="booking-form-section">
+  <div class="form-wrapper">
+    <form id="booking-form" class="booking-form" method="POST">
+      <h2>Book Your SEO Package</h2>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="package">Select Package</label>
+      <select id="package" name="package" required>
+        <option value="">-- Select a Package --</option>
+        <option value="Starter SEO">Starter SEO (R2,500 / month)</option>
+        <option value="Growth SEO">Growth SEO (R5,000 / month)</option>
+        <option value="Premium SEO">Premium SEO (R10,000 / month)</option>
+      </select>
+
+      <button type="submit" class="btn-gold">Submit Booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init('JPo6qH3tup39Imi5H'); // ✅ Your correct EmailJS Public Key
+  })();
+</script>
+
+<!-- Submission Script -->
+<script>
+  document.getElementById('booking-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_zh8ldwl', 'template_7p802g8', this)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        window.location.href = 'thank-you.html'; // ✅ Update this to your thank-you page URL
+      }, function(error) {
+        console.error('FAILED...', error);
+        alert("Oops! Something went wrong. Please check your internet connection or try again later.");
+      });
+  });
+</script>
+
+</body>
+</html>

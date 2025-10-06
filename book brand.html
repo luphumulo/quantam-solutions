@@ -1,0 +1,237 @@
+
+
+<style>
+
+/* Booking Form Styling — Larger Size */
+ body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    .navbar {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .navbar-brand span {
+      color: #d4af37;
+    }
+
+    .hero {
+      background: #f9f9f9;
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .pricing-section {
+      padding: 60px 20px;
+    }
+
+    .pricing-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-card.best-value {
+      border: 2px solid #d4af37;
+    }
+
+    .pricing-card h3 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      text-align: left;
+    }
+
+    .features li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .btn-gold:hover {
+      background-color: #c39c2d;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+.booking-form-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+border-radius: 300PX;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+}
+
+.form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 50px 40px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.booking-form h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.booking-form input,
+.booking-form select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  font-size: 1.05rem;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+  outline: none;
+}
+
+.booking-form .btn-gold {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+</style>
+<!-- Booking Form -->
+<section class="container booking-form-section mt-5 mb-5">
+  <div class="form-wrapper">
+    <h2 class="text-center mb-4">Book brand strategy Package</h2>
+    <form action="submit_booking.php" method="POST" class="booking-form">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control form-control-lg" name="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control form-control-lg" name="email" required />
+      </div>
+      <div class="mb-4">
+        <label for="package" class="form-label">Select Package</label>
+        <select class="form-select form-select-lg" name="package" required>
+          <option value="">-- Select a Package --</option>
+          <option value="Starter SEO">Starter SEO (R2,500 / month)</option>
+          <option value="Growth SEO">Growth SEO (R5,000 / month)</option>
+          <option value="Premium SEO">Premium SEO (R10,000 / month)</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn-gold">Submit Booking</button>
+      </div>
+    </form>
+  </div>
+</section>
+<ection>
+  ection>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init('JPo6qH3tup39Imi5H'); // ✅ Your correct EmailJS Public Key
+  })();
+</script>
+
+<!-- Submission Script -->
+<script>
+  document.getElementById('booking-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_zh8ldwl', 'template_7p802g8', this)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        window.location.href = 'thank-you.html'; // ✅ Update this to your thank-you page URL
+      }, function(error) {
+        console.error('FAILED...', error);
+        alert("Oops! Something went wrong. Please check your internet connection or try again later.");
+      });
+  });
+</script>
+</ection>
+</body>
+</html>
+

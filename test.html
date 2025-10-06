@@ -1,0 +1,28 @@
+<form id="test-form">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <select name="package" required>
+    <option value="Starter SEO">Starter SEO</option>
+    <option value="Growth SEO">Growth SEO</option>
+    <option value="Premium SEO">Premium SEO</option>
+  </select>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  emailjs.init("JPo6qH3tup39Imi5H");
+
+  document.getElementById("test-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    console.log("Sending...");
+
+    emailjs.sendForm("service_zh8ldwl", "template_7p802g8", this)
+      .then(function(res) {
+        console.log("Success!", res);
+        alert("Email sent successfully!");
+      }, function(err) {
+        console.error("Failed:", err);
+        alert("Email failed: " + JSON.stringify(err));
+      });
+  });
+</script>
