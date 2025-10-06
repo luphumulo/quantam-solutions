@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Quantam Solutions</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    .navbar {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .navbar-brand span {
+      color: #d4af37;
+    }
+
+    .hero {
+      background: #f9f9f9;
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .pricing-section {
+      padding: 60px 20px;
+    }
+
+    .pricing-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-card.best-value {
+      border: 2px solid #d4af37;
+    }
+
+    .pricing-card h3 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      text-align: left;
+    }
+
+    .features li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .btn-gold:hover {
+      background-color: #c39c2d;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Quantam<span>solutions</span></a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Social Media Marketing Packages</h1>
+  <p>Reach your audience, grow your brand, and boost engagement with our tailored plans.</p>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section container">
+  <div class="row gy-4">
+
+    <!-- Starter Plan -->
+    <div class="col-md-4">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <p>Perfect for startups & individuals new to social media</p>
+        <p class="price">R2,500</p>
+        <ul class="features">
+          <li>Account setup (Facebook, Instagram)</li>
+          <li>8 custom posts per month</li>
+          <li>Basic graphics & captions</li>
+          <li>Hashtag research</li>
+          <li>1 social platform</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <a href="book-starter.html" class="btn-gold">Choose Starter</a>
+      </div>
+    </div>
+
+    <!-- Growth Plan -->
+    <div class="col-md-4">
+      <div class="pricing-card best-value">
+        <h3>Growth</h3>
+        <p>For growing brands that want consistency</p>
+        <p class="price">R5,000</p>
+        <ul class="features">
+          <li>12–16 posts per month</li>
+          <li>Content calendar planning</li>
+          <li>2 social platforms</li>
+          <li>Community engagement (basic replies)</li>
+          <li>Monthly analytics & strategy session</li>
+          <li>Ad campaign setup (boosted posts)</li>
+        </ul>
+        <a href="book-growth.html" class="btn-gold">Choose Growth</a>
+      </div>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="col-md-4">
+      <div class="pricing-card">
+        <h3>Pro</h3>
+        <p>Advanced strategy for serious growth</p>
+        <p class="price">R10,000</p>
+        <ul class="features">
+          <li>20+ posts per month (incl. video reels)</li>
+          <li>Ad management (Facebook & Instagram)</li>
+          <li>3–4 social platforms</li>
+          <li>Influencer outreach & collab support</li>
+          <li>Advanced analytics & conversion tracking</li>
+          <li>Weekly performance reports</li>
+          <li>1-on-1 strategy calls (biweekly)</li>
+        </ul>
+        <a href="book-pro.html" class="btn-gold">Choose Pro</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Quantam Solutions. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
